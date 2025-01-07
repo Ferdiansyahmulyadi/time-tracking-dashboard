@@ -743,7 +743,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.75rem;
   }
   .container .activity-data .routines-data .routines .routine-name-group {
     width: 100%;
