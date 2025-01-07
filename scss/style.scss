@@ -518,7 +518,7 @@ body {
         background-color: get-color('neutral', 'Dark blue');
         padding-top: rem-calc(29);
         padding-right: rem-calc(35);
-        padding-bottom: rem-calc(32);
+        padding-bottom: rem-calc(34);
         padding-left: rem-calc(30);
         margin-top: rem-calc(-46);
 
@@ -527,7 +527,7 @@ body {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: rem-calc(28);
+          gap: rem-calc(35);
 
           .routine-name-group {
             width: 100%;
