@@ -9,12 +9,18 @@ $colors: (
     'black': $black,
   ),
   'primary': (
-    'tomato': hsl(4, 100%, 67%),
+    'blue': #5847eb,
+    'light red (work)': #ff8c66,
+    'Soft blue (play)': #56c2e6,
+    'Light red (study)': #ff5c7c,
+    'Lime green (exercise)': #4acf81,
+    'Violet (social)': #7536d3,
+    'Soft orange (self care)': #f1c65b,
   ),
   'neutral': (
-    'dark slate grey': hsl(234, 29%, 20%),
-    'charcoal grey': hsl(235, 18%, 26%),
-    'grey': hsl(231, 7%, 60%),
-    'white': hsl(0, 0%, 100%),
+    'Very dark blue': #0f1424,
+    'Dark blue': #1c1f4a,
+    'Desaturated blue': #6f76c8,
+    'Pale Blue': #bdc1ff,
   ),
 );

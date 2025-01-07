@@ -1,0 +1,668 @@
+@use 'base';
+@use 'functions' as *;
+@use 'mixins' as *;
+
+body {
+  background-color: get-color('neutral', 'Very dark blue');
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem-calc(327), 1fr));
+  gap: rem-calc(30);
+  padding: rem-calc(81) rem-calc(24);
+
+  .user-profile {
+    min-width: rem-calc(327);
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+
+    .user-name {
+      width: 100%;
+      height: rem-calc(133);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: rem-calc(20);
+      padding: rem-calc(35) rem-calc(38) rem-calc(34) rem-calc(32);
+      border-radius: rem-calc(15);
+      background-color: get-color('primary', 'blue');
+      border: 0px solid #979797;
+      z-index: 2;
+
+      .user-photo {
+        width: rem-calc(64);
+        height: rem-calc(64);
+        border-radius: 50%;
+        background-color: get-color('base', 'white');
+      }
+
+      .user-report {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem-calc(4);
+
+        .report-for {
+          @include typography('p-rubik-regular-small');
+          color: get-color('neutral', 'Pale Blue');
+        }
+
+        h2 {
+          @include typography('h2-rubik-light-mobile');
+          color: get-color('base', 'white');
+        }
+      }
+    }
+
+    .user-routines {
+      width: 100%;
+      height: rem-calc(80);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: get-color('neutral', 'Dark blue');
+      padding: rem-calc(43) 0 rem-calc(25) 0;
+      border-radius: rem-calc(15);
+      margin-top: rem-calc(-24);
+      z-index: 1;
+
+      .routine-interval {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+        #daily-interval {
+          @include typography('p-rubik-regular');
+          color: get-color('neutral', 'Desaturated blue');
+
+          &:active {
+            color: get-color('base', 'white');
+          }
+
+          &:hover {
+            color: get-color('base', 'white');
+          }
+        }
+
+        #weekly-interval {
+          @include typography('p-rubik-regular');
+          color: get-color('neutral', 'Desaturated blue');
+
+          &:active {
+            color: get-color('base', 'white');
+          }
+
+          &:hover {
+            color: get-color('base', 'white');
+          }
+        }
+
+        #monthly-interval {
+          @include typography('p-rubik-regular');
+          color: get-color('neutral', 'Desaturated blue');
+
+          &:active {
+            color: get-color('base', 'white');
+          }
+
+          &:hover {
+            color: get-color('base', 'white');
+          }
+        }
+      }
+    }
+  }
+
+  .activity-data {
+    min-width: rem-calc(327);
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+
+    .activity-icon-box {
+      width: 100%;
+      height: rem-calc(90);
+      display: flex;
+      flex-direction: column;
+      align-items: last baseline;
+      padding: 0 rem-calc(24) 0 rem-calc(24);
+      border-radius: rem-calc(15);
+      overflow: hidden;
+
+      &.work {
+        background-color: get-color('primary', 'light red (work)');
+
+        .routine-icon {
+          width: rem-calc(78);
+          height: rem-calc(78);
+          margin-top: rem-calc(-10);
+        }
+      }
+
+      &.play {
+        background-color: get-color('primary', 'Soft blue (play)');
+
+        .routine-icon {
+          width: rem-calc(77);
+          height: rem-calc(77);
+          margin-top: rem-calc(-10);
+        }
+      }
+
+      &.study {
+        background-color: get-color('primary', 'Light red (study)');
+
+        .routine-icon {
+          width: rem-calc(79);
+          height: rem-calc(79);
+          margin-top: rem-calc(-10);
+        }
+      }
+
+      &.exercise {
+        background-color: get-color('primary', 'Lime green (exercise)');
+
+        .routine-icon {
+          width: rem-calc(81);
+          height: rem-calc(55);
+          margin-top: rem-calc(-2);
+        }
+      }
+
+      &.social {
+        background-color: get-color('primary', 'Violet (social)');
+
+        .routine-icon {
+          width: rem-calc(75);
+          height: rem-calc(100);
+          margin-top: rem-calc(-14);
+        }
+      }
+
+      &.self-care {
+        background-color: get-color('primary', 'Soft orange (self care)');
+
+        .routine-icon {
+          width: rem-calc(67);
+          height: rem-calc(67);
+          margin-top: rem-calc(-12);
+        }
+      }
+    }
+
+    .routines-data {
+      width: 100%;
+      height: rem-calc(122);
+      border-radius: rem-calc(15);
+      background-color: get-color('neutral', 'Dark blue');
+      padding: rem-calc(28) rem-calc(24);
+      margin-top: rem-calc(-52);
+
+      .routines {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem-calc(6);
+
+        .routine-name-group {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+
+          #work-title {
+            @include typography('p-rubik-medium');
+            color: get-color('base', 'white');
+          }
+
+          #play-title {
+            @include typography('p-rubik-medium');
+            color: get-color('base', 'white');
+          }
+
+          #study-title {
+            @include typography('p-rubik-medium');
+            color: get-color('base', 'white');
+          }
+
+          #exercise-title {
+            @include typography('p-rubik-medium');
+            color: get-color('base', 'white');
+          }
+
+          #social-title {
+            @include typography('p-rubik-medium');
+            color: get-color('base', 'white');
+          }
+
+          #self-care-title {
+            @include typography('p-rubik-medium');
+            color: get-color('base', 'white');
+          }
+
+          .three-dots {
+            width: rem-calc(21);
+            height: rem-calc(5);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .dot {
+              width: rem-calc(5);
+              height: rem-calc(5);
+              border-radius: 50%;
+              background-color: #d8d8d8;
+              border: 0 solid #979797;
+            }
+          }
+        }
+
+        .routine-duration-group {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+
+          #work-duration {
+            @include typography('h1-rubik-light-mobile');
+            color: get-color('base', 'white');
+          }
+
+          #previous-work-duration {
+            @include typography('p-rubik-regular-small');
+            color: get-color('neutral', 'Pale Blue');
+          }
+
+          #play-duration {
+            @include typography('h1-rubik-light-mobile');
+            color: get-color('base', 'white');
+          }
+
+          #previous-play-duration {
+            @include typography('p-rubik-regular-small');
+            color: get-color('neutral', 'Pale Blue');
+          }
+
+          #study-duration {
+            @include typography('h1-rubik-light-mobile');
+            color: get-color('base', 'white');
+          }
+
+          #previous-study-duration {
+            @include typography('p-rubik-regular-small');
+            color: get-color('neutral', 'Pale Blue');
+          }
+
+          #exercise-duration {
+            @include typography('h1-rubik-light-mobile');
+            color: get-color('base', 'white');
+          }
+
+          #previous-exercise-duration {
+            @include typography('p-rubik-regular-small');
+            color: get-color('neutral', 'Pale Blue');
+          }
+
+          #social-duration {
+            @include typography('h1-rubik-light-mobile');
+            color: get-color('base', 'white');
+          }
+
+          #previous-social-duration {
+            @include typography('p-rubik-regular-small');
+            color: get-color('neutral', 'Pale Blue');
+          }
+
+          #self-care-duration {
+            @include typography('h1-rubik-light-mobile');
+            color: get-color('base', 'white');
+          }
+
+          #previous-self-care-duration {
+            @include typography('p-rubik-regular-small');
+            color: get-color('neutral', 'Pale Blue');
+          }
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .container {
+    max-height: rem-calc(518);
+    display: grid;
+    grid-template-columns: rem-calc(255) rem-calc(255) rem-calc(255) rem-calc(
+        255
+      );
+    grid-template-rows: rem-calc(244) rem-calc(244);
+    gap: rem-calc(30);
+    padding: 0;
+    margin: rem-calc(253) auto;
+
+    .user-profile {
+      min-width: rem-calc(255);
+      height: rem-calc(518);
+      grid-row: 1 / 3;
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+
+      .user-name {
+        width: 100%;
+        height: rem-calc(354);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem-calc(43);
+        padding: rem-calc(37) rem-calc(84) rem-calc(80) rem-calc(32);
+        border-radius: rem-calc(15);
+        background-color: get-color('primary', 'blue');
+        border: 0px solid #979797;
+        z-index: 2;
+
+        .user-photo {
+          width: rem-calc(82);
+          height: rem-calc(82);
+          border-radius: 50%;
+          background-color: get-color('base', 'white');
+        }
+
+        .user-report {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: rem-calc(4);
+
+          .report-for {
+            @include typography('p-rubik-regular-small');
+            color: get-color('neutral', 'Pale Blue');
+          }
+
+          h2 {
+            @include typography('h2-rubik-light-desktop');
+            color: get-color('base', 'white');
+          }
+        }
+      }
+
+      .user-routines {
+        width: 100%;
+        height: rem-calc(200);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: get-color('neutral', 'Dark blue');
+        padding-top: rem-calc(64);
+        padding-left: rem-calc(32);
+        padding-bottom: rem-calc(33);
+        border-radius: rem-calc(15);
+        margin-top: rem-calc(-24);
+        z-index: 1;
+
+        .routine-interval {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: rem-calc(24);
+
+          #daily-interval {
+            @include typography('p-rubik-regular');
+            color: get-color('neutral', 'Desaturated blue');
+          }
+
+          #weekly-interval {
+            @include typography('p-rubik-regular');
+            color: get-color('neutral', 'Desaturated blue');
+          }
+
+          #monthly-interval {
+            @include typography('p-rubik-regular');
+            color: get-color('neutral', 'Desaturated blue');
+          }
+        }
+      }
+    }
+
+    .activity-data {
+      min-width: rem-calc(255);
+      height: rem-calc(244);
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+
+      .activity-icon-box {
+        width: 100%;
+        height: rem-calc(90);
+        display: flex;
+        flex-direction: column;
+        align-items: last baseline;
+        padding: 0 rem-calc(24) 0 rem-calc(24);
+        border-radius: rem-calc(15);
+        overflow: hidden;
+
+        &.work {
+          background-color: get-color('primary', 'light red (work)');
+
+          .routine-icon {
+            width: rem-calc(78);
+            height: rem-calc(78);
+            margin-top: rem-calc(-10);
+          }
+        }
+
+        &.play {
+          background-color: get-color('primary', 'Soft blue (play)');
+
+          .routine-icon {
+            width: rem-calc(77);
+            height: rem-calc(77);
+            margin-top: rem-calc(-10);
+          }
+        }
+
+        &.study {
+          background-color: get-color('primary', 'Light red (study)');
+
+          .routine-icon {
+            width: rem-calc(79);
+            height: rem-calc(79);
+            margin-top: rem-calc(-10);
+          }
+        }
+
+        &.exercise {
+          background-color: get-color('primary', 'Lime green (exercise)');
+
+          .routine-icon {
+            width: rem-calc(81);
+            height: rem-calc(55);
+            margin-top: rem-calc(-2);
+          }
+        }
+
+        &.social {
+          background-color: get-color('primary', 'Violet (social)');
+
+          .routine-icon {
+            width: rem-calc(75);
+            height: rem-calc(100);
+            margin-top: rem-calc(-14);
+          }
+        }
+
+        &.self-care {
+          background-color: get-color('primary', 'Soft orange (self care)');
+
+          .routine-icon {
+            width: rem-calc(67);
+            height: rem-calc(67);
+            margin-top: rem-calc(-12);
+          }
+        }
+      }
+
+      .routines-data {
+        width: 100%;
+        height: rem-calc(199);
+        border-radius: rem-calc(15);
+        background-color: get-color('neutral', 'Dark blue');
+        padding-top: rem-calc(29);
+        padding-right: rem-calc(35);
+        padding-bottom: rem-calc(32);
+        padding-left: rem-calc(30);
+        margin-top: rem-calc(-46);
+
+        .routines {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: rem-calc(24);
+
+          .routine-name-group {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            #work-title {
+              @include typography('p-rubik-medium');
+              color: get-color('base', 'white');
+            }
+
+            #play-title {
+              @include typography('p-rubik-medium');
+              color: get-color('base', 'white');
+            }
+
+            #study-title {
+              @include typography('p-rubik-medium');
+              color: get-color('base', 'white');
+            }
+
+            #exercise-title {
+              @include typography('p-rubik-medium');
+              color: get-color('base', 'white');
+            }
+
+            #social-title {
+              @include typography('p-rubik-medium');
+              color: get-color('base', 'white');
+            }
+
+            #self-care-title {
+              @include typography('p-rubik-medium');
+              color: get-color('base', 'white');
+            }
+
+            .three-dots {
+              width: rem-calc(21);
+              height: rem-calc(5);
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+
+              .dot {
+                width: rem-calc(5);
+                height: rem-calc(5);
+                border-radius: 50%;
+                background-color: #d8d8d8;
+                border: 0 solid #979797;
+              }
+            }
+          }
+
+          .routine-duration-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: rem-calc(10);
+
+            #work-duration {
+              @include typography('h1-rubik-light-desktop');
+              color: get-color('base', 'white');
+            }
+
+            #previous-work-duration {
+              @include typography('p-rubik-regular-small');
+              color: get-color('neutral', 'Pale Blue');
+            }
+
+            #play-duration {
+              @include typography('h1-rubik-light-desktop');
+              color: get-color('base', 'white');
+            }
+
+            #previous-play-duration {
+              @include typography('p-rubik-regular-small');
+              color: get-color('neutral', 'Pale Blue');
+            }
+
+            #study-duration {
+              @include typography('h1-rubik-light-desktop');
+              color: get-color('base', 'white');
+            }
+
+            #previous-study-duration {
+              @include typography('p-rubik-regular-small');
+              color: get-color('neutral', 'Pale Blue');
+            }
+
+            #exercise-duration {
+              @include typography('h1-rubik-light-desktop');
+              color: get-color('base', 'white');
+            }
+
+            #previous-exercise-duration {
+              @include typography('p-rubik-regular-small');
+              color: get-color('neutral', 'Pale Blue');
+            }
+
+            #social-duration {
+              @include typography('h1-rubik-light-desktop');
+              color: get-color('base', 'white');
+            }
+
+            #previous-social-duration {
+              @include typography('p-rubik-regular-small');
+              color: get-color('neutral', 'Pale Blue');
+            }
+
+            #self-care-duration {
+              @include typography('h1-rubik-light-desktop');
+              color: get-color('base', 'white');
+            }
+
+            #previous-self-care-duration {
+              @include typography('p-rubik-regular-small');
+              color: get-color('neutral', 'Pale Blue');
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  color: get-color('base', 'white');
+  text-align: center;
+
+  a {
+    color: get-color('primary', 'Light red (study)');
+  }
+}
