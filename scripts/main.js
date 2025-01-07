@@ -492,14 +492,23 @@ let monthlyInterval = document.querySelector('#monthly-interval');
 dailyInterval.addEventListener('click', () => {
   console.log('Daily interval clicked');
   filterData('daily');
+  dailyInterval.style.color = '#ffffff';
+  weeklyInterval.style.color = '#6f76c8';
+  monthlyInterval.style.color = '#6f76c8';
 });
 
 weeklyInterval.addEventListener('click', () => {
   console.log('Weekly interval clicked');
   filterData('weekly');
+  dailyInterval.style.color = '#6f76c8';
+  weeklyInterval.style.color = '#ffffff';
+  monthlyInterval.style.color = '#6f76c8';
 });
 
 monthlyInterval.addEventListener('click', () => {
   console.log('Monthly interval clicked');
   filterData('monthly');
+  dailyInterval.style.color = '#6f76c8';
+  weeklyInterval.style.color = '#6f76c8';
+  monthlyInterval.style.color = '#ffffff';
 });

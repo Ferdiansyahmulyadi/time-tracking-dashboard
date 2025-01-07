@@ -271,12 +271,6 @@ body {
   letter-spacing: 0px;
   color: #6f76c8;
 }
-.container .user-profile .user-routines .routine-interval #daily-interval:active {
-  color: #ffffff;
-}
-.container .user-profile .user-routines .routine-interval #daily-interval:hover {
-  color: #ffffff;
-}
 .container .user-profile .user-routines .routine-interval #weekly-interval {
   font-family: "Rubik";
   font-weight: 400;
@@ -285,12 +279,6 @@ body {
   letter-spacing: 0px;
   color: #6f76c8;
 }
-.container .user-profile .user-routines .routine-interval #weekly-interval:active {
-  color: #ffffff;
-}
-.container .user-profile .user-routines .routine-interval #weekly-interval:hover {
-  color: #ffffff;
-}
 .container .user-profile .user-routines .routine-interval #monthly-interval {
   font-family: "Rubik";
   font-weight: 400;
@@ -298,12 +286,6 @@ body {
   line-height: auto;
   letter-spacing: 0px;
   color: #6f76c8;
-}
-.container .user-profile .user-routines .routine-interval #monthly-interval:active {
-  color: #ffffff;
-}
-.container .user-profile .user-routines .routine-interval #monthly-interval:hover {
-  color: #ffffff;
 }
 .container .activity-data {
   min-width: 20.4375rem;

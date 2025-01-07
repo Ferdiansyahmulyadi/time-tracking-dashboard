@@ -78,40 +78,16 @@ body {
         #daily-interval {
           @include typography('p-rubik-regular');
           color: get-color('neutral', 'Desaturated blue');
-
-          &:active {
-            color: get-color('base', 'white');
-          }
-
-          &:hover {
-            color: get-color('base', 'white');
-          }
         }
 
         #weekly-interval {
           @include typography('p-rubik-regular');
           color: get-color('neutral', 'Desaturated blue');
-
-          &:active {
-            color: get-color('base', 'white');
-          }
-
-          &:hover {
-            color: get-color('base', 'white');
-          }
         }
 
         #monthly-interval {
           @include typography('p-rubik-regular');
           color: get-color('neutral', 'Desaturated blue');
-
-          &:active {
-            color: get-color('base', 'white');
-          }
-
-          &:hover {
-            color: get-color('base', 'white');
-          }
         }
       }
     }
